@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_products_product_attribute_values",
+  "info": {
+    "displayName": "Product Attribute Value",
+    "icon": "expand"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    }
+  }
+}

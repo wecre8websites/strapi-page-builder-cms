@@ -4,6 +4,9 @@
   "private": true,
   "description": "A Strapi application",
   "scripts": {
+    "load:demodata": "strapi import -f ./demo/data/demodata.tar.gz",
+    "configure:security": "cp ./demo/config/middlewares.ts ./config/middlewares.ts",
+    "prepare": "npm run load:demodata && npm run configure:security",
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
@@ -14,10 +17,12 @@
     "@strapi/plugin-cloud": "5.10.4",
     "@strapi/plugin-users-permissions": "5.10.4",
     "@strapi/strapi": "5.10.4",
+    "@wecre8websites/strapi-page-builder": "^1.0.6",
     "better-sqlite3": "11.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-router-dom": "^6.0.0",
+    "strapi-plugin-navigation": "^3.0.8",
     "styled-components": "^6.0.0"
   },
   "devDependencies": {
@@ -32,5 +37,14 @@
   },
   "strapi": {
     "uuid": "b53c2578-7a78-4fca-ba86-d95f99fff180"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "@swc/core",
+      "better-sqlite3",
+      "core-js-pure",
+      "esbuild",
+      "sharp"
+    ]
   }
 }
