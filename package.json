@@ -1,12 +1,12 @@
 {
   "name": "strapi-page-builder-cms",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "description": "A Strapi application",
   "scripts": {
     "load:demodata": "strapi import -f ./demo/data/demodata.tar.gz",
     "configure:security": "cp ./demo/config/middlewares.ts ./config/middlewares.ts",
-    "prepare": "npm run load:demodata && npm run configure:security",
+    "demo:prepare": "npm run load:demodata && npm run configure:security",
     "build": "strapi build",
     "deploy": "strapi deploy",
     "develop": "strapi develop",
@@ -17,7 +17,7 @@
     "@strapi/plugin-cloud": "5.10.4",
     "@strapi/plugin-users-permissions": "5.10.4",
     "@strapi/strapi": "5.10.4",
-    "@wecre8websites/strapi-page-builder": "^1.0.6",
+    "@wecre8websites/strapi-page-builder": "^1.0.8",
     "better-sqlite3": "11.3.0",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
